@@ -73,11 +73,11 @@ Editar
 Desarrollado por [Cristian Ortiz]
 Frontend Developer | UI/UX Enthusiast | Code Artist 🎨
 
-🌐 Portfolio: https://tu-portfolio.com
+🌐 Portfolio: https://chrise-com.netlify.app/
 
-🐙 GitHub: @tu-usuario
+🐙 GitHub: https://github.com/metazack89
 
-💼 LinkedIn: linkedin.com/in/tu-linkedin
+💼 LinkedIn: www.linkedin.com/in/cristianortiz89
 
 📄 Licencia
 Este proyecto está bajo la licencia MIT — ¡libre de usar y mejorar!
