@@ -51,7 +51,7 @@ const Navbar = () => {
               className="text-3xl text-black font-inter font-medium capitalize flex items-center gap-2"
             >
               <Armchair size="2rem" color="#029fae" />
-              Limage
+              Chriscom
             </Link>
           </div>
 
