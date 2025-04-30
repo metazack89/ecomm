@@ -1,0 +1,31 @@
+/* Estilos generales para el contenedor de Pages */
+.pages-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 20px;
+  background-color: #1a202c; /* Fondo oscuro */
+  color: #7e22ce; /* Tono purple-600 para el texto */
+}
+
+/* Contenedor para el spinner */
+.spinner-container {
+  margin-bottom: 20px;
+}
+
+/* Estilo para el título */
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #7e22ce; /* Tono purple-600 para el título */
+  margin-top: 20px;
+}
+
+/* Estilo para el párrafo */
+.pages-container p {
+  font-size: 1.25rem;
+  color: #b4b4f5; /* Un color gris claro para el texto del párrafo */
+}

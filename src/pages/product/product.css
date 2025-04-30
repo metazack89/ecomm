@@ -1,0 +1,12 @@
+/* Estilos adicionales para el contenedor de Product */
+.bg-dark {
+  background-color: #1a202c; /* Fondo oscuro */
+}
+
+.text-purple-600 {
+  color: #7e22ce; /* Tono purple-600 */
+}
+
+.text-light-gray {
+  color: #b4b4f5; /* Color gris claro para los párrafos */
+}

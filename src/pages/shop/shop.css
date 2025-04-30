@@ -1,0 +1,20 @@
+/* Estilos adicionales para el contenedor de Shop */
+.bg-dark {
+  background-color: #1a202c; /* Fondo oscuro */
+}
+
+.text-purple {
+  color: #7e22ce; /* Tono purple-600 */
+}
+
+.text-light-gray {
+  color: #b4b4f5; /* Color gris claro para los párrafos */
+}
+
+.bg-purple {
+  background-color: #7e22ce; /* Fondo morado para el botón */
+}
+
+.hover-bg-purple:hover {
+  background-color: #5b1a9d; /* Cambio de color en hover */
+}

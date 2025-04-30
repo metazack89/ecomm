@@ -1,0 +1,196 @@
+/* Importar fuentes desde Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* Importar Tailwind CSS */
+@import "tailwindcss";
+/* Importar DaisyUI */
+@plugin "daisyui";
+
+/* Definir la fuente personalizada */
+@theme {
+  --font-inter: "Inter", sans-serif;
+}
+
+/* Estilo del slider/banner */
+.banner_slide_item {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+  gap: 7.5rem;
+}
+
+.banner_image {
+  position: relative;
+  z-index: 2;
+}
+
+.banner_image img {
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho disponible */
+  height: auto; /* Mantiene la proporción de la imagen */
+  object-fit: cover; /* Recorta la imagen para llenar el contenedor */
+}
+
+.banner_image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%; /* Asegura que el fondo ocupe todo el ancho */
+  height: 100%; /* Hace que el fondo cubra todo el espacio */
+  background-color: #e1e3e5;
+  background-size: cover; /* Asegura que el fondo cubra todo el espacio */
+  background-position: center; /* Centra el fondo */
+  border-radius: 100%;
+  z-index: -1;
+}
+
+/* Estilos del slider */
+.slider_container > .slick-slider > .slick-prev,
+.slider_container > .slick-slider > .slick-next {
+  z-index: 5 !important;
+}
+
+.slick-prev {
+  left: -95px !important;
+}
+
+.slick-next {
+  right: -95px !important;
+}
+
+.slider_container > .slick-slider > .slick-prev:before,
+.slider_container > .slick-slider > .slick-next:before {
+  font-family: "slick";
+  font-size: 52px !important;
+  line-height: 1;
+  opacity: 0.75;
+  color: #007580 !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slider_container > .slick-slider > .slick-dots {
+  position: absolute;
+  bottom: 100px !important;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.slider_container > .slick-slider > .slick-dots li button:before {
+  font-family: "slick";
+  font-size: 22px !important;
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  content: "•";
+  text-align: center;
+  opacity: 0.25;
+  color: black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slider_container
+  > .slick-slider
+  > .slick-dots
+  > li.slick-active
+  button:before {
+  color: #007580 !important;
+}
+
+/* Estilos para el componente de entrega */
+.delivery_component {
+  margin-top: -4rem;
+  position: relative;
+  z-index: 5;
+}
+
+/* Estilos del slider de características */
+.features_slider > .slick-slider > .slick-prev:before,
+.features_slider > .slick-slider > .slick-next:before {
+  font-size: 39px !important;
+  color: #007580;
+}
+
+/* Estilos de los testimonios (client_say) */
+.client_say_description {
+  position: relative;
+}
+
+.client_say_description::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: -27px;
+  width: 3px;
+  height: 100%;
+  background-color: #007580;
+}
+
+/* Estilos responsivos para móviles y tabletas */
+@media (max-width: 640px) {
+  .banner_slide_item {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .slick-prev,
+  .slick-next {
+    left: -70px !important;
+    right: -70px !important;
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 42px !important;
+  }
+
+  .slider_container > .slick-slider > .slick-dots {
+    bottom: 60px !important;
+  }
+
+  .slider_container > .slick-slider > .slick-dots li button:before {
+    font-size: 18px !important;
+  }
+
+  .delivery_component {
+    margin-top: 1rem;
+  }
+
+  .client_say_description::before {
+    left: -15px;
+  }
+}
+
+/* Estilos responsivos para tabletas y pantallas medianas */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .banner_slide_item {
+    gap: 4rem;
+  }
+
+  .slick-prev,
+  .slick-next {
+    left: -80px !important;
+    right: -80px !important;
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 47px !important;
+  }
+
+  .slider_container > .slick-slider > .slick-dots {
+    bottom: 80px !important;
+  }
+
+  .slider_container > .slick-slider > .slick-dots li button:before {
+    font-size: 20px !important;
+  }
+}
