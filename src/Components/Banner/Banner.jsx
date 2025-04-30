@@ -3,37 +3,44 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { MoveRight } from "lucide-react";
 
+// ✅ Importar las imágenes correctamente desde src/assets
+import bannerImage1 from "../../assets/Banner/banner-image1.png";
+import bannerImage2 from "../../assets/Banner/banner-image2.png";
+import bannerImage3 from "../../assets/Banner/banner-image3.png";
+import bannerImage4 from "../../assets/Banner/banner-image4.png";
+import bannerImage5 from "../../assets/Banner/banner-image5.png";
+
 const Banner = () => {
   const products = [
     {
       id: 1,
       title: "Fashion-forward sunglasses with full UV protection",
       subTitle: "welcome to sunglass",
-      image: "/src/assets/Banner/banner-image1.png",
+      image: bannerImage1,
     },
     {
       id: 2,
       title: "Sleek, modern-fit pants for effortless style",
       subTitle: "welcome to pants",
-      image: "/src/assets/Banner/banner-image2.png",
+      image: bannerImage2,
     },
     {
       id: 3,
       title: "Timeless tailored shirts crafted for comfort and class",
       subTitle: "welcome to shirts",
-      image: "/src/assets/Banner/banner-image3.png",
+      image: bannerImage3,
     },
     {
       id: 4,
       title: "Versatile T-shirts that blend comfort with contemporary style",
       subTitle: "welcome to t-shirts",
-      image: "/src/assets/Banner/banner-image4.png",
+      image: bannerImage4,
     },
     {
       id: 5,
       title: "Engineered athletic footwear for peak performance",
       subTitle: "welcome to footwear",
-      image: "/src/assets/Banner/banner-image5.png",
+      image: bannerImage5,
     },
   ];
 
@@ -50,7 +57,6 @@ const Banner = () => {
       <div className="slider-container slider_container w-full h-full">
         <Slider {...settings}>
           {products?.map((product, index) => {
-            // Alternar tonos suaves de fondo por índice
             const backgroundColors = [
               "#f0f9ff",
               "#e0f7fa",
@@ -65,7 +71,7 @@ const Banner = () => {
                 key={product?.id}
                 className="banner_slide_item flex flex-col lg:flex-row items-center justify-between gap-6"
               >
-                {/* banner text  */}
+                {/* banner text */}
                 <div className="banner_text">
                   <p className="text-sm font-inter text-[#272343] uppercase font-normal">
                     {product?.subTitle}
@@ -81,7 +87,7 @@ const Banner = () => {
                   </button>
                 </div>
 
-                {/* banner image  */}
+                {/* banner image */}
                 <div
                   className="banner_image w-full max-w-md h-full flex items-center justify-center p-6 rounded-full transition-colors duration-500"
                   style={{ backgroundColor: bgColor }}
