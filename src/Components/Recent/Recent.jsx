@@ -4,47 +4,55 @@ import Slider from "react-slick";
 import { ShoppingCart } from "lucide-react";
 import SectionTitle from "../SectionTitle/SectionTitle";
 
+// ✅ Importar imágenes correctamente desde src/assets
+import product1 from "../../assets/features/product_1.png";
+import product2 from "../../assets/features/product_2.png";
+import product3 from "../../assets/features/product_3.png";
+import product4 from "../../assets/features/product_4.png";
+import product5 from "../../assets/features/product_5.png";
+import product6 from "../../assets/features/product_6.png";
+
 const Recent = () => {
   const features = [
     {
       title: "sport pants women",
       status: "New",
       price: "$80",
-      image: "/src/assets/features/product_1.png",
+      image: product1,
       currentPrice: "$130",
     },
     {
       title: "T-shirt women",
       status: "Sales",
       price: "$70",
-      image: "/src/assets/features/product_2.png",
+      image: product2,
       currentPrice: "$120",
     },
     {
       title: "Footwear sport men",
       price: "$250",
-      image: "/src/assets/features/product_3.png",
+      image: product3,
       currentPrice: "$320",
     },
     {
       title: "T-shirt sport men",
       status: "New",
       price: "$140",
-      image: "/src/assets/features/product_4.png",
+      image: product4,
       currentPrice: "$200",
     },
     {
       title: "Sunglasses men",
       status: "New",
       price: "$100",
-      image: "/src/assets/features/product_5.png",
+      image: product5,
       currentPrice: "$150",
     },
     {
       title: "Footwear sport woman",
       status: "Sales",
       price: "$280",
-      image: "/src/assets/features/product_6.png",
+      image: product6,
       currentPrice: "$350",
     },
   ];
