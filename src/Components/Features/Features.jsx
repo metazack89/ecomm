@@ -4,47 +4,55 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { ShoppingCart } from "lucide-react";
 
+// ✅ Importar las imágenes correctamente desde src/assets
+import productImage1 from "../../assets/features/product_1.png";
+import productImage2 from "../../assets/features/product_2.png";
+import productImage3 from "../../assets/features/product_3.png";
+import productImage4 from "../../assets/features/product_4.png";
+import productImage5 from "../../assets/features/product_5.png";
+import productImage6 from "../../assets/features/product_6.png";
+
 const Features = () => {
   const features = [
     {
       title: "sport pants women",
       status: "New",
       price: "$80",
-      image: "/src/assets/features/product_1.png",
+      image: productImage1,
       currentPrice: "$130",
     },
     {
       title: "T-shirt women",
       status: "Sales",
       price: "$70",
-      image: "/src/assets/features/product_2.png",
+      image: productImage2,
       currentPrice: "$120",
     },
     {
       title: "Footwear sport men",
       price: "$250",
-      image: "/src/assets/features/product_3.png",
+      image: productImage3,
       currentPrice: "$320",
     },
     {
       title: "T-shirt sport men",
       status: "New",
       price: "$140",
-      image: "/src/assets/features/product_4.png",
+      image: productImage4,
       currentPrice: "$200",
     },
     {
       title: "Sunglasses men",
       status: "New",
       price: "$100",
-      image: "/src/assets/features/product_5.png",
+      image: productImage5,
       currentPrice: "$150",
     },
     {
       title: "Footwear sport woman",
       status: "Sales",
       price: "$280",
-      image: "/src/assets/features/product_6.png",
+      image: productImage6,
       currentPrice: "$350",
     },
   ];
