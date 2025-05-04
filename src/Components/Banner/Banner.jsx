@@ -50,6 +50,29 @@ const Banner = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
@@ -72,7 +95,7 @@ const Banner = () => {
                 className="banner_slide_item flex flex-col lg:flex-row items-center justify-between gap-6"
               >
                 {/* banner text */}
-                <div className="banner_text">
+                <div className="banner_text text-center lg:text-left">
                   <p className="text-sm font-inter text-[#272343] uppercase font-normal">
                     {product?.subTitle}
                   </p>

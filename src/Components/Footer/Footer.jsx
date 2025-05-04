@@ -7,16 +7,16 @@ import {
   Twitter,
   Youtube,
 } from "lucide-react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom"; // Cambié `react-router` por `react-router-dom`
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="bg-gray-800 text-white">
       <div className="footer_top mx-h-[343px] w-full border-t border-b border-[#e1e3e5] pt-[80px] pb-[60px]">
         <div className="lg:container mx-auto">
-          <div className="grid grid-cols-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             <div>
-              {/* logo wrapper  */}
+              {/* logo wrapper */}
               <div className="logo_wrapper mb-7">
                 <Link
                   to="/"
@@ -28,98 +28,74 @@ const Footer = () => {
 
               <p className="text-base text-[#3318e0] font-inter font-normal mb-4 max-w-[350px]">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Temporibus repellat vero nulla! Quibusdam, reiciendis maiores
-                fugiat atque aliquam molestiae vero?
+                Temporibus repellat vero nulla!
               </p>
 
               <div className="footer_social flex items-center gap-3">
-                <Link className="p-3 rounded-full border-[#007580] inline-block hover:border-b-cyan-500 border-[1px]">
-                  <Facebook size="1.5rem" color="#007580" />
+                <Link to="#" aria-label="Facebook" className="social-icon">
+                  <Facebook size="1.5rem" />
                 </Link>
-
-                <Link className="p-3 rounded-full border-[#007580] inline-block hover:border-b-cyan-500 border-[1px]">
-                  <Twitter size="1.5rem" color="#007580" />
+                <Link to="#" aria-label="Twitter" className="social-icon">
+                  <Twitter size="1.5rem" />
                 </Link>
-
-                <Link className="p-3 rounded-full border-[#007580] inline-block hover:border-b-cyan-500 border-[1px]">
-                  <Instagram size="1.5rem" color="#007580" />
+                <Link to="#" aria-label="Instagram" className="social-icon">
+                  <Instagram size="1.5rem" />
                 </Link>
-
-                <Link className="p-3 rounded-full border-[#007580] inline-block hover:border-b-cyan-500 border-[1px]">
-                  <Youtube size="1.5rem" color="#007580" />
+                <Link to="#" aria-label="Youtube" className="social-icon">
+                  <Youtube size="1.5rem" />
                 </Link>
               </div>
             </div>
 
-            <div className="footer_wrapper">
-              <h3 className="text-xl text-[#9a9caa] font-inter font-medium uppercase hover:text-gray-300">
-                category
+            <div>
+              <h3 className="text-xl text-[#9a9caa] font-inter font-medium uppercase">
+                Category
               </h3>
               <ul className="space-y-2 mt-4">
                 <li>
-                  <Link className="text-base text-[#361be3] font-inter font-normal hover:text-purple-500 capitalize">
-                    sofa
-                  </Link>
+                  <Link className="footer-link">Sofa</Link>
                 </li>
                 <li>
-                  <Link className="text-base text-[#361be3] font-inter font-normal hover:text-purple-500 capitalize">
-                    armchair
-                  </Link>
+                  <Link className="footer-link">Armchair</Link>
                 </li>
                 <li>
-                  <Link className="text-base text-[#361be3] font-inter font-normal hover:text-purple-500 capitalize">
-                    wing chair
-                  </Link>
+                  <Link className="footer-link">Wing chair</Link>
                 </li>
                 <li>
-                  <Link className="text-base text-[#361be3] font-inter font-normal  hover:text-purple-500 capitalize">
-                    desk chair
-                  </Link>
+                  <Link className="footer-link">Desk chair</Link>
                 </li>
                 <li>
-                  <Link className="text-base text-[#361be3] font-inter font-normal hover:text-purple-500 capitalize">
-                    wooden chair
-                  </Link>
+                  <Link className="footer-link">Wooden chair</Link>
                 </li>
                 <li>
-                  <Link className="text-base text-[#361be3] font-inter font-normal hover:text-purple-500 capitalize">
-                    park bench
-                  </Link>
+                  <Link className="footer-link">Park bench</Link>
                 </li>
               </ul>
             </div>
 
-            <div className="footer_wrapper">
-              <h3 className="text-xl text-[#9a9caa]  hover:text-gray-300 font-inter font-medium uppercase">
-                support
+            <div>
+              <h3 className="text-xl text-[#9a9caa] font-inter font-medium uppercase">
+                Support
               </h3>
               <ul className="space-y-2 mt-4">
                 <li>
-                  <Link className="text-base text-[#361be3]  font-inter font-normal hover:text-purple-500 capitalize">
-                    help & support
-                  </Link>
+                  <Link className="footer-link">Help & Support</Link>
                 </li>
                 <li>
-                  <Link className="text-base text-[#361be3] font-inter font-normal hover:text-purple-500 capitalize">
-                    tearms & condition
-                  </Link>
+                  <Link className="footer-link">Terms & Conditions</Link>
                 </li>
                 <li>
-                  <Link className="text-base text-[#361be3]  font-inter font-normal hover:text-purple-500 capitalize">
-                    privacy policy
-                  </Link>
+                  <Link className="footer-link">Privacy Policy</Link>
                 </li>
                 <li>
-                  <Link className="text-base text-[#361be3] font-inter font-normal hover:text-purple-500 capitalize">
-                    help
-                  </Link>
+                  <Link className="footer-link">Help</Link>
                 </li>
               </ul>
             </div>
 
-            <div className="newsletter">
-              <h3 className="text-xl text-[#9a9caa] hover:text-gray-300 font-inter font-medium uppercase">
-                newsletter
+            <div>
+              <h3 className="text-xl text-[#9a9caa] font-inter font-medium uppercase">
+                Newsletter
               </h3>
               <form
                 action="#"
@@ -129,6 +105,7 @@ const Footer = () => {
                   type="email"
                   placeholder="Your Email.."
                   className="max-w-[285px] w-full h-[46px] border-[#e1e3e5] border-[1px] rounded-lg pl-2"
+                  aria-label="Enter your email"
                 />
                 <button
                   type="submit"
@@ -142,7 +119,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="footer_bottom w-full h-[75px] flex items-center justify-center ">
+      <div className="footer_bottom w-full h-[75px] flex items-center justify-center bg-gray-900">
         <div className="lg:container mx-auto">
           <div className="flex items-center justify-between">
             <div>
@@ -155,8 +132,7 @@ const Footer = () => {
               <p className="flex items-center gap-2 text-[#9a9caa] text-xl hover:text-gray-300">
                 Bank Note <Banknote size="2rem" />
               </p>
-
-              <p className="flex items-center gap-2 text-[#9a9caa] hover:text-gray-300 text-xl">
+              <p className="flex items-center gap-2 text-[#9a9caa] text-xl hover:text-gray-300">
                 Credit Card <CreditCard size="2rem" />
               </p>
             </div>

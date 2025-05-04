@@ -1,17 +1,20 @@
 import { Routes, Route } from "react-router-dom";
 import Navbar from "../Components/Navbar/Navbar";
-import Home from "../pages/Home/Home";
-import Auth from "../pages/Auth/Auth";
-import Login from "../pages/Auth/Login/Login";
-import Register from "../pages/Auth/Register/Register";
-import Error from "../pages/Error/Error";
-import AuthCheck from "../AuthCheck/AuthCheck";
 import Footer from "../Components/Footer/Footer";
+import AuthCheck from "../AuthCheck/AuthCheck";
 
+// Pages
+import Home from "../pages/Home/Home";
 import Shop from "../pages/shop/Shop";
 import Product from "../pages/product/Product";
 import Pages from "../pages/pages/Pages";
 import About from "../pages/about/About";
+import Error from "../pages/Error/Error";
+
+// Auth
+import Auth from "../pages/Auth/Auth";
+import Login from "../pages/Auth/Login/Login";
+import Register from "../pages/Auth/Register/Register";
 
 const MainLayout = () => {
   return (
@@ -31,7 +34,7 @@ const MainLayout = () => {
         <Route path="/pages" element={<Pages />} />
         <Route path="/about" element={<About />} />
 
-        <Route path="auth" element={<Auth />}>
+        <Route path="/auth" element={<Auth />}>
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
         </Route>

@@ -31,13 +31,13 @@ import product_25 from "../../assets/products/product_25.png";
 import product_26 from "../../assets/products/product_26.png";
 
 const Product = () => {
-  const [active, setActive] = useState({ id: 0, product: "all" });
+  const [active, setActive] = useState("all");
 
   const productTitle = [
-    { id: 0, title: "all", product: "all" },
-    { id: 1, title: "newest", product: "newest" },
-    { id: 2, title: "trending", product: "trending" },
-    { id: 3, title: "best seller", product: "best_seller" },
+    { title: "all", product: "all" },
+    { title: "newest", product: "newest" },
+    { title: "trending", product: "trending" },
+    { title: "best seller", product: "best_seller" },
   ];
 
   const products = [
@@ -251,31 +251,31 @@ const Product = () => {
     },
   ];
 
-  const productFilter = products.filter(
-    (p) => p.product === active?.product || active?.product === "all"
+  const filteredProducts = products.filter(
+    (p) => p.product === active || active === "all"
   );
 
+  const getButtonClassName = (product) =>
+    "text-base font-black uppercase cursor-pointer " +
+    (active === product
+      ? "text-[#958ec3] hover:text-purple-300"
+      : "text-[#8b99f2] hover:text-purple-500");
+
   return (
-    <div className="lg:container mx-auto">
-      <div className="flex flex-col items-center justify-center">
+    <div className="lg:container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="flex flex-col items-center justify-center mb-11">
         <SectionTitle
-          title="our product"
+          title="Our Products"
           textAlign="center"
           textColor="text-[#272343]"
           mb="mb-5"
         />
-        <div className="flex items-center justify-center gap-6 mb-11">
-          {productTitle.map((title, indx) => (
+        <div className="flex items-center justify-center gap-6 mb-5">
+          {productTitle.map((title) => (
             <button
-              key={title.id}
-              onClick={() =>
-                setActive({ id: title.id, product: title.product })
-              }
-              className={`text-base font-black uppercase font-inter cursor-pointer ${
-                active.id === indx
-                  ? "text-[#958ec3] hover:text-purple-300"
-                  : "text-[#8b99f2] hover:text-purple-500"
-              }`}
+              key={title.product}
+              onClick={() => setActive(title.product)}
+              className={getButtonClassName(title.product)}
             >
               {title.title}
             </button>
@@ -283,10 +283,10 @@ const Product = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-4 items-center gap-6">
-        {productFilter.map((product, index) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {filteredProducts.map((product, index) => (
           <div key={index} className="p-4">
-            <div className="feature_image mb-4 relative">
+            <div className="relative">
               <img
                 className="w-full max-h-[312px] rounded-lg object-cover"
                 src={product.image}
@@ -300,9 +300,9 @@ const Product = () => {
                 </div>
               )}
             </div>
-            <div className="feature_content">
+            <div className="mt-4">
               <div className="flex items-center justify-between">
-                <h4 className="text-base text-[#11b9c9] capitalize font-inter font-normal mb-4">
+                <h4 className="text-base text-[#11b9c9] capitalize font-inter font-normal">
                   {product.title}
                 </h4>
                 <span className="bg-[#2b919a] h-[44px] w-[44px] rounded-lg flex items-center justify-center">
