@@ -2,8 +2,6 @@
 
 /* Importar Tailwind CSS */
 @import "tailwindcss";
-/* Importar DaisyUI */
-@import "daisyui";
 
 /* Definir la fuente personalizada */
 :root {
