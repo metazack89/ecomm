@@ -2,9 +2,11 @@
 
 /* Importar Tailwind CSS */
 @import "tailwindcss";
+/* Importar DaisyUI */
+@plugin "daisyui";
 
 /* Definir la fuente personalizada */
-:root {
+@theme {
   --font-inter: "Inter", sans-serif;
 }
 

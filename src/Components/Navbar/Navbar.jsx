@@ -1,4 +1,3 @@
-import { useState } from "react"; // Asegúrate de importar useState
 import {
   Armchair,
   Check,
@@ -12,8 +11,6 @@ import {
 import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-
   return (
     <div>
       {/* navbar top */}
@@ -23,7 +20,7 @@ const Navbar = () => {
             <Check /> Free on all orders over $50
           </p>
 
-          <div className="navbar_top_right flex items-center gap-6">
+          <div className="navbar_top_right flex items-center gap-6 ">
             <select
               defaultValue="Server location"
               className="h-[30px] w-[70px] text-sm font-inter font-normal capitalize text-white border rounded hover:text-sky-300"
@@ -103,80 +100,68 @@ const Navbar = () => {
       {/* navbar bottom */}
       <div className="navbar_bottom flex items-center justify-center w-full h-[75px] bg-white border-b-[1px] border-[#e1e3e5]">
         <div className="lg:container flex items-center justify-between">
-          {/* Toggle hamburguesa */}
-          <div className="lg:hidden">
-            <button
-              className="text-white"
-              onClick={() => setMenuOpen(!menuOpen)}
-            >
-              <Menu size="24px" />
-            </button>
-          </div>
-
-          {/* Menú de categorías */}
-          <div className={`${menuOpen ? "block" : "hidden"} lg:block`}>
-            <nav className="navbar_bottom_left flex items-center gap-8">
-              <div className="dropdown dropdown-start">
-                <div
-                  tabIndex={0}
-                  role="button"
-                  className="btn m-1 flex items-center gap-5 capitalize hover:text-sky-300"
-                >
-                  <Menu /> all categories
-                </div>
-                <ul
-                  tabIndex={0}
-                  className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
-                >
-                  <li className="hover:text-sky-300">
-                    <Link to="#">Sunglass</Link>
-                  </li>
-                  <li className="hover:text-sky-300">
-                    <Link to="#">Pant</Link>
-                  </li>
-                  <li className="hover:text-sky-300">
-                    <Link to="#">Shirt</Link>
-                  </li>
-                  <li className="hover:text-sky-300">
-                    <Link to="#">T-Shirt</Link>
-                  </li>
-                  <li className="hover:text-sky-300">
-                    <Link to="#">Sports footwear</Link>
-                  </li>
-                </ul>
+          <div className="navbar_bottom_left flex items-center gap-8">
+            <div className="dropdown dropdown-start">
+              <div
+                tabIndex={0}
+                role="button"
+                className="btn m-1 flex items-center gap-5 capitalize hover:text-sky-300"
+              >
+                <Menu /> all categories
               </div>
-              <nav className="flex items-center gap-8">
-                <NavLink
-                  to="/"
-                  className="text-sm text-[#029fae] font-inter font-medium capitalize hover:text-sky-300"
-                >
-                  Home
-                </NavLink>
-                <NavLink
-                  to="/shop"
-                  className="text-sm text-[#636270] font-inter font-medium capitalize hover:text-sky-300"
-                >
-                  Shop
-                </NavLink>
-                <NavLink
-                  to="/product"
-                  className="text-sm text-[#636270] font-inter font-medium capitalize hover:text-sky-300"
-                >
-                  Product
-                </NavLink>
-                <NavLink
-                  to="/pages"
-                  className="text-sm text-[#636270] font-inter font-medium capitalize hover:text-sky-300"
-                >
-                  Pages
-                </NavLink>
-                <NavLink
-                  to="/about"
-                  className="text-sm text-[#636270] font-inter font-medium capitalize hover:text-sky-300"
-                >
-                  About
-                </NavLink>
-              </nav>
+              <ul
+                tabIndex={0}
+                className="dropdown-content menu bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm"
+              >
+                <li className="hover:text-sky-300">
+                  <Link to="#">Sunglass</Link>
+                </li>
+                <li className="hover:text-sky-300">
+                  <Link to="#">Pant</Link>
+                </li>
+                <li className="hover:text-sky-300">
+                  <Link to="#">Shirt</Link>
+                </li>
+                <li className="hover:text-sky-300">
+                  <Link to="#">T-Shirt</Link>
+                </li>
+                <li className="hover:text-sky-300">
+                  <Link to="#">Sports footwear</Link>
+                </li>
+              </ul>
+            </div>
+            <nav className="flex items-center gap-8">
+              <NavLink
+                to="/"
+                className="text-sm text-[#029fae] font-inter font-medium capitalize hover:text-sky-300"
+              >
+                Home
+              </NavLink>
+              <NavLink
+                to="/shop"
+                className="text-sm text-[#636270] font-inter font-medium capitalize hover:text-sky-300"
+              >
+                Shop
+              </NavLink>
+
+              <NavLink
+                to="/product"
+                className="text-sm text-[#636270] font-inter font-medium capitalize hover:text-sky-300"
+              >
+                Product
+              </NavLink>
+              <NavLink
+                to="/pages"
+                className="text-sm text-[#636270] font-inter font-medium capitalize hover:text-sky-300"
+              >
+                Pages
+              </NavLink>
+              <NavLink
+                to="/about"
+                className="text-sm text-[#636270] font-inter font-medium capitalize hover:text-sky-300"
+              >
+                About
+              </NavLink>
             </nav>
           </div>
           <div className="navbar_bottom_right">
