@@ -1,22 +1,18 @@
-/* Importar fuentes desde Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 /* Importar Tailwind CSS */
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
-
+@import "tailwindcss";
 /* Importar DaisyUI */
 @import "daisyui";
 
 /* Definir la fuente personalizada */
-* {
-  font-family: "Inter", sans-serif;
+:root {
+  --font-inter: "Inter", sans-serif;
 }
 
 /* Estilo del slider/banner */
 .banner_slide_item {
-  display: flex;
+  display: flex !important;
   justify-content: space-between;
   align-items: center;
   gap: 7.5rem;
@@ -50,31 +46,31 @@
 /* Estilos del slider */
 .slider_container > .slick-slider > .slick-prev,
 .slider_container > .slick-slider > .slick-next {
-  z-index: 5;
+  z-index: 5 !important;
 }
 
 .slick-prev {
-  left: -95px;
+  left: -95px !important;
 }
 
 .slick-next {
-  right: -95px;
+  right: -95px !important;
 }
 
 .slider_container > .slick-slider > .slick-prev:before,
 .slider_container > .slick-slider > .slick-next:before {
   font-family: "slick";
-  font-size: 52px;
+  font-size: 52px !important;
   line-height: 1;
   opacity: 0.75;
-  color: #007580;
+  color: #007580 !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .slider_container > .slick-slider > .slick-dots {
   position: absolute;
-  bottom: 100px;
+  bottom: 100px !important;
   display: block;
   width: 100%;
   padding: 0;
@@ -85,7 +81,7 @@
 
 .slider_container > .slick-slider > .slick-dots li button:before {
   font-family: "slick";
-  font-size: 22px;
+  font-size: 22px !important;
   line-height: 20px;
   position: absolute;
   top: 0;
@@ -105,7 +101,7 @@
   > .slick-dots
   > li.slick-active
   button:before {
-  color: #007580;
+  color: #007580 !important;
 }
 
 /* Estilos para el componente de entrega */
@@ -118,7 +114,7 @@
 /* Estilos del slider de características */
 .features_slider > .slick-slider > .slick-prev:before,
 .features_slider > .slick-slider > .slick-next:before {
-  font-size: 39px;
+  font-size: 39px !important;
   color: #007580;
 }
 
@@ -146,21 +142,21 @@
 
   .slick-prev,
   .slick-next {
-    left: -70px;
-    right: -70px;
+    left: -70px !important;
+    right: -70px !important;
   }
 
   .slick-prev:before,
   .slick-next:before {
-    font-size: 42px;
+    font-size: 42px !important;
   }
 
   .slider_container > .slick-slider > .slick-dots {
-    bottom: 60px;
+    bottom: 60px !important;
   }
 
   .slider_container > .slick-slider > .slick-dots li button:before {
-    font-size: 18px;
+    font-size: 18px !important;
   }
 
   .delivery_component {
@@ -180,20 +176,20 @@
 
   .slick-prev,
   .slick-next {
-    left: -80px;
-    right: -80px;
+    left: -80px !important;
+    right: -80px !important;
   }
 
   .slick-prev:before,
   .slick-next:before {
-    font-size: 47px;
+    font-size: 47px !important;
   }
 
   .slider_container > .slick-slider > .slick-dots {
-    bottom: 80px;
+    bottom: 80px !important;
   }
 
   .slider_container > .slick-slider > .slick-dots li button:before {
-    font-size: 20px;
+    font-size: 20px !important;
   }
 }
